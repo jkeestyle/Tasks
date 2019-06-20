@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //  Introduction
+    // The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc.
+    //
+    //     Task :
+    // Given a year, return the century it is in.
+    //
+    // Input , Output Examples ::
+    //     centuryFromYear(1705)  returns (18)
+    // centuryFromYear(1900)  returns (19)
+    // centuryFromYear(1601)  returns (17)
+    // centuryFromYear(2000)  returns (20)
+    // Hope you enjoy it .. Awaiting for Best Practice Codes
+    //
+    // Enjoy Learning !!!
+    function centuryFromYear(n) {
+        if(n%100 ==0) {
+            var result = n / 100;
+            return result;
+        } else {
+            var result = Math.floor(n/100 + 1);
+            return result;
+        }
+    }
+    alert(centuryFromYear(1700));
+    // Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+    //
+    //     Some cases:
+    //
+    //     [22, -6, 32, 82, 9, 25] =>  [-6, 32, 25]
+    //
+    //     [68, -1, 1, -7, 10, 10] => [-1, 10]
+    //
+    //     [-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68] => [-85, 72, 0, 68]
+
+    // function arrays(array) {
+    //     var i = 1;
+    //     while (i<array.length) {
+    //         if(array[i]%i != 0) {
+    //             slice(array[i]);
+    //         }
+    //     }
+    //     return array;
+    // }
+    // alert(arrays([22,-6,32,82,9,25]));
+    // Simple, remove the spaces from the string, then return the resultant string.
+
+    function noSpace(x){
+        return x.replace(/\s/g, '');
+    }
+    alert(noSpace('hello man'));
+    // /*Remove First and Last Character
+    // It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.*/
+
+     function removeChar(str){
+     return str.slice(1,-1);
+     }
+     alert(removeChar('hello'));
+</script>
+</body>
+</html>
